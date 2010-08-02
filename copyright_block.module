@@ -1,0 +1,31 @@
+<?php
+// $Id$
+
+/**
+ * @file
+ * Adds a simple copyright notice block using current year from date()
+ * and the site_name variable.
+ */
+
+/**
+ * Implementation of hook_block().
+ */
+function copyright_block_block($op = 'list', $delta = 0, $edit = array()) {
+  switch ($op) {
+
+    case 'list':
+      $blocks[0]['info'] = t('Copyright notice');
+      return $blocks;
+
+    case 'view':
+      if ($delta == 0) {
+        // $block['subject'] = t('Copyright');
+        $block['subject'] = NULL;
+        $block['content'] = t('&copy;') . date('Y') . ' ' . variable_get('site_name', 'Drupal');
+      }
+
+    return $block;
+  }    
+}
+
+
