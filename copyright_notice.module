@@ -10,7 +10,7 @@
 /**
  * Implementation of hook_block().
  */
-function copyright_block_block($op = 'list', $delta = 0, $edit = array()) {
+function copyright_notice_block($op = 'list', $delta = 0, $edit = array()) {
   switch ($op) {
 
     case 'list':

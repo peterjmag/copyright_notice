@@ -1,5 +1,5 @@
 ; $Id$
-name = Copyright Block
+name = Copyright Notice
 description = "Adds a block with a simple copyright notice, including the current year and site name."
 
 ; Core version (required)
