@@ -21,7 +21,7 @@ function copyright_notice_block($op = 'list', $delta = 0, $edit = array()) {
       if ($delta == 0) {
         // $block['subject'] = t('Copyright');
         $block['subject'] = NULL;
-        $block['content'] = t('&copy;') . date('Y') . ' ' . variable_get('site_name', 'Drupal');
+        $block['content'] = t('&#169;') . date('Y') . ' ' . variable_get('site_name', 'Drupal');
       }
 
     return $block;
